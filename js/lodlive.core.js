@@ -154,12 +154,12 @@ var debugOn = false;
 		},
 		doStats : function(uri) {
 			if ($('#stats').length == 0) {
-				$('body').append('<div id="stats"><iframe src="stats.html?' + uri + '" style="display:none"></iframe></div>');
+				$('body').append('<div id="stats"><iframe src="lib/stats.html?' + uri + '" style="display:none"></iframe></div>');
 			} else if ($('#stats').children('iframe').length == 10) {
 				$('#stats').empty();
-				$('#stats').append('<iframe src="stats.html?' + uri + '" style="display:none"></iframe>');
+				$('#stats').append('<iframe src="lib/stats.html?' + uri + '" style="display:none"></iframe>');
 			} else {
-				$('#stats').append('<iframe src="stats.html?' + uri + '" style="display:none"></iframe>');
+				$('#stats').append('<iframe src="lib/stats.html?' + uri + '" style="display:none"></iframe>');
 			}
 		},
 		msg : function(msg, action, type, endpoint, inverse) {
@@ -2583,7 +2583,7 @@ var debugOn = false;
 				$.jsonp({
 					url : url,
 					beforeSend : function() {
-						destBox.children('.box').html('<img style=\"margin-top:' + (destBox.children('.box').height() / 2 - 8) + 'px\" src="img/ajax-loader.gif"/>');
+						destBox.children('.box').html('<img style=\"margin-top:' + (destBox.children('.box').height() / 2 - 8) + 'px\" src="lib/img/ajax-loader.gif"/>');
 					},
 					success : function(json) {
 						json = json['results']['bindings'];
@@ -2704,7 +2704,7 @@ var debugOn = false;
 				$.jsonp({
 					url : SPARQLquery,
 					beforeSend : function() {
-						destBox.children('.box').html('<img style=\"margin-top:' + (destBox.children('.box').height() / 2 - 8) + 'px\" src="img/ajax-loader.gif"/>');
+						destBox.children('.box').html('<img style=\"margin-top:' + (destBox.children('.box').height() / 2 - 8) + 'px\" src="lib/img/ajax-loader.gif"/>');
 					},
 					success : function(json) {
 						json = json['results']['bindings'];
@@ -2747,7 +2747,7 @@ var debugOn = false;
 							$.jsonp({
 								url : SPARQLquery,
 								beforeSend : function() {
-									destBox.children('.box').html('<img style=\"margin-top:' + (destBox.children('.box').height() / 2 - 5) + 'px\" src="img/ajax-loader.gif"/>');
+									destBox.children('.box').html('<img style=\"margin-top:' + (destBox.children('.box').height() / 2 - 5) + 'px\" src="lib/img/ajax-loader.gif"/>');
 
 								},
 								success : function(json) {
@@ -2873,7 +2873,7 @@ var debugOn = false;
 			$.jsonp({
 				url : SPARQLquery,
 				beforeSend : function() {
-					destBox.html('<img src="img/ajax-loader.gif"/>');
+					destBox.html('<img src="lib/img/ajax-loader.gif"/>');
 				},
 				success : function(json) {
 					destBox.html(lang('choose'));
@@ -3015,7 +3015,7 @@ var debugOn = false;
 			$.jsonp({
 				url : SPARQLquery,
 				beforeSend : function() {
-					destBox.html('<img src="img/ajax-loader.gif"/>');
+					destBox.html('<img src="lib/img/ajax-loader.gif"/>');
 				},
 				success : function(json) {
 					destBox.html('');
